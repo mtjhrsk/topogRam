@@ -25,7 +25,7 @@
 #'
 #' @export
 
-topogRam <- function(data, key_var, shape = "svk", geo_id = "IDN2", geo_lab = NULL,
+topogRam <- function(data, key_var, shape = "svk-1", geo_id = "IDN2", geo_lab = NULL,
                      colors, origin = NULL, scale = NULL, width = 500, height = 500, elementId = NULL) {
 
   if (missing(colors))
@@ -43,7 +43,7 @@ topogRam <- function(data, key_var, shape = "svk", geo_id = "IDN2", geo_lab = NU
   if (!is.list(key_var) & is.character(key_var))
     key_var <- lapply(key_var, function(x) list(key = x, name = "", format = "", lab = ""))
 
-  shape <- match.arg(arg = shape, choices = c("france-reg", "france-reg-2016", "france-dep", "france-dep-2", "usa-states", "sweden-1", "svk"))
+  shape <- match.arg(arg = shape, choices = c("france-reg", "france-reg-2016", "france-dep", "france-dep-2", "usa-states", "sweden-1", "svk-1"))
 
   if (is.null(origin))
     origin <- c(8, 45.5)
