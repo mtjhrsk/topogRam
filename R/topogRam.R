@@ -25,14 +25,14 @@
 #'
 #' @export
 
-topogRam <- function(data, key_var, shape = "france-reg", geo_id = "id", geo_lab = NULL,
+topogRam <- function(data, key_var, shape = "svk", geo_id = "IDN2", geo_lab = NULL,
                      colors, origin = NULL, scale = NULL, width = 500, height = 500, elementId = NULL) {
 
   if (missing(colors))
     colors <- c("#FEE5D9", "#FCAE91", "#FB6A4A", "#DE2D26", "#A50F15")
 
-  if (geo_id != "id")
-    names(data)[names(data) == geo_id] <- "id"
+  if (geo_id != "IDN2")
+    names(data)[names(data) == geo_id] <- "IDN2"
 
   if (!is.null(geo_lab))
     names(data)[names(data) == geo_lab] <- "NAME"
@@ -43,7 +43,7 @@ topogRam <- function(data, key_var, shape = "france-reg", geo_id = "id", geo_lab
   if (!is.list(key_var) & is.character(key_var))
     key_var <- lapply(key_var, function(x) list(key = x, name = "", format = "", lab = ""))
 
-  shape <- match.arg(arg = shape, choices = c("france-reg", "france-reg-2016", "france-dep", "france-dep-2", "usa-states", "sweden-1"))
+  shape <- match.arg(arg = shape, choices = c("france-reg", "france-reg-2016", "france-dep", "france-dep-2", "usa-states", "sweden-1", "svk"))
 
   if (is.null(origin))
     origin <- c(8, 45.5)
