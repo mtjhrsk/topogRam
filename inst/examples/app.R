@@ -13,6 +13,7 @@ library("RColorBrewer")
 data(frRegPop)
 data(frDptPop)
 data(frReg2016Pop)
+data(svk)
 
 # ui
 ui <- fluidPage(
@@ -36,7 +37,8 @@ server <- function(input, output){
       input$shape,
       "france-reg" = list(dat = frRegPop, geo_lab = "region"),
       "france-reg-2016" = list(dat = frReg2016Pop, geo_lab = "region2016"),
-      "france-dep" = list(dat = frDptPop, geo_lab = "departement")
+      "france-dep" = list(dat = frDptPop, geo_lab = "departement"),
+       "svk" = list(dat = svk, geo_lab = "svksvk")
     )
     topogRam(
       data = params$dat, shape = input$shape,
