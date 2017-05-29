@@ -257,6 +257,9 @@ HTMLWidgets.widget({
 	        shapejs = frReg2016;
 	      } else if (x.shape == 'sweden-1') {
 	        shapejs = sweden1;
+		 } else if (x.shape == 'svk') {
+	        shapejs = svk;
+		      
 	      }
 
         //d3.json(shape, function(topo) {
