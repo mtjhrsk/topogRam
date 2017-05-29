@@ -89,7 +89,7 @@ HTMLWidgets.widget({
         		.attr("class", "state")
         		.attr("id", function(d) {
         		  if (typeof d.properties !== 'undefined') {
-        		    if (x.shape == 'france-reg' || x.shape == 'france-dep' || x.shape == 'france-dep-2' || x.shape == 'france-reg-2016' || x.shape == 'sweden-1' || x.shape == 'svk') {
+        		    if (x.shape == 'france-reg' || x.shape == 'france-dep' || x.shape == 'france-dep-2' || x.shape == 'france-reg-2016' || x.shape == 'sweden-1' || x.shape == 'svk-1') {
           		    //console.log(d);
           		    return d.properties.id;
           		  } else {
@@ -257,7 +257,7 @@ HTMLWidgets.widget({
 	        shapejs = frReg2016;
 	      } else if (x.shape == 'sweden-1') {
 	        shapejs = sweden1;
-		 } else if (x.shape == 'svk') {
+		 } else if (x.shape == 'svk-1') {
 	        shapejs = svk;
 		      
 	      }
@@ -269,7 +269,7 @@ HTMLWidgets.widget({
           	rawData = data;
           	dataById = d3.nest()
           		.key(function(d) {
-          		  if (x.shape == 'france-reg' || x.shape == 'france-dep' || x.shape == 'france-dep-2' || x.shape == 'france-reg-2016' || x.shape == 'sweden-1' || x.shape == 'svk') {
+          		  if (x.shape == 'france-reg' || x.shape == 'france-dep' || x.shape == 'france-dep-2' || x.shape == 'france-reg-2016' || x.shape == 'sweden-1' || x.shape == 'svk-1') {
           		    return d.id;
           		  } else {
           		    return d.NAME;
