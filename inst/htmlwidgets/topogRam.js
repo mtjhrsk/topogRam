@@ -264,7 +264,7 @@ HTMLWidgets.widget({
 
         //d3.json(shape, function(topo) {
           	topology = shapejs;
-          	geometries = topology.objects.states.geometries;
+          	geometries = topology.objects.geometries;
           	data = df;
           	rawData = data;
           	dataById = d3.nest()
